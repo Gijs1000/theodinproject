@@ -9,8 +9,8 @@ RSpec.describe "user completes a lesson", type: :system do
     section = create(:section, course: course)
     lesson = create(:lesson, section: section)
     visit path_course_lesson_path(path, course, lesson)
-    # find(:test_id, 'complete_btn').click
-    # expect(find(:test_id, 'incomplete_btn')).not_to be nil
+    find(:test_id, 'complete_btn').click
+    expect(find(:test_id, 'incomplete_btn')).not_to be nil
   end
 
 end

@@ -9,7 +9,8 @@ Capybara.register_driver(:cuprite) do |app|
       process_timeout: 30,
       timeout: 60,
       inspector: true,
-      headless: !ENV["HEADLESS"].in?(%w[n 0 no false])
+      headless: !ENV["HEADLESS"].in?(%w[n 0 no false]),
+      js_errors: true
     }
   )
 end
